@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"postcss-loader",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "postcss-loader",
+    "description": "api documentation for [postcss-loader (v1.3.3)](https://github.com/postcss/postcss-loader#readme) [![npm package](https://img.shields.io/npm/v/npmdoc-postcss-loader.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-postcss-loader) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-postcss-loader.svg)](https://travis-ci.org/npmdoc/node-npmdoc-postcss-loader)",
     "devDependencies": {
-        "postcss-loader": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "postcss-loader": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-postcss-loader",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-postcss-loader",
+    "keywords": [
+        "documentation",
+        "postcss-loader"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_postcss_loader.js",
+    "name": "npmdoc-postcss-loader",
+    "nameAlias": "npmdoc_postcss_loader",
+    "nameOriginal": "npmdoc-postcss-loader",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-postcss-loader.git"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }

@@ -3,7 +3,7 @@
 
 [![NPM](https://nodei.co/npm/postcss-loader.png?downloads=true)](https://www.npmjs.com/package/postcss-loader)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-postcss-loader/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-postcss-loader_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-postcss-loader/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-postcss-loader/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-postcss-loader_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-postcss-loader/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-postcss-loader/build/screenCapture.npmPackageListing.svg)
 

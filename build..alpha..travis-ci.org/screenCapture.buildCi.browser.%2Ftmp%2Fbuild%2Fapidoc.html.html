@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/postcss/postcss-loader#readme"
-
-    >postcss-loader (v1.3.3)</a>
+    <a href="https://github.com/postcss/postcss-loader#readme">postcss-loader (v1.3.3)</a>
 </h1>
 <h4>PostCSS loader for webpack</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.postcss-loader">module postcss-loader</a><ol>
 
@@ -172,12 +165,12 @@
     }
 
     Promise.resolve().then(function () {
-        if ( typeof options !== &#x27;undefined&#x27; ) {
+        if ( typeof options !== 'undefined' ) {
             return parseOptions.call(loader, options, pack);
         } else {
             if ( pack ) {
-                throw new Error(&#x27;PostCSS plugin pack is supported &#x27; +
-                                &#x27;only when use plugins in webpack config&#x27;);
+                throw new Error('PostCSS plugin pack is supported ' +
+                                'only when use plugins in webpack config');
             }
             return loadConfig({ webpack: loader }, configPath, { argv: false });
         }
@@ -192,30 +185,30 @@
             from: file,
             to:   file,
             map:  {
-                inline:     params.sourceMap === &#x27;inline&#x27;,
+                inline:     params.sourceMap === 'inline',
                 annotation: false
             }
         });
 
-        if ( typeof map === &#x27;string&#x27; ) map = JSON.parse(map);
-        if ( map &#x26;&#x26; map.mappings ) opts.map.prev = map;
+        if ( typeof map === 'string' ) map = JSON.parse(map);
+        if ( map &amp;&amp; map.mappings ) opts.map.prev = map;
 
         if ( params.syntax ) {
-            if ( typeof params.syntax === &#x27;string&#x27; ) {
+            if ( typeof params.syntax === 'string' ) {
                 opts.syntax = require(params.syntax);
             } else {
                 opts.syntax = params.syntax;
             }
         }
         if ( params.parser ) {
-            if ( typeof params.parser === &#x27;string&#x27; ) {
+            if ( typeof params.parser === 'string' ) {
                 opts.parser = require(params.parser);
             } else {
                 opts.parser = params.parser;
             }
         }
         if ( params.stringifier ) {
-            if ( typeof params.stringifier === &#x27;string&#x27; ) {
+            if ( typeof params.stringifier === 'string' ) {
                 opts.stringifier = require(params.stringifier);
             } else {
                 opts.stringifier = params.stringifier;
@@ -223,14 +216,14 @@
         }
 
         var exec = params.exec || config.exec;
-        if ( params.parser === &#x27;postcss-js&#x27; || exec ) {
+        if ( params.parser === 'postcss-js' || exec ) {
             source = loader.exec(source, loader.resource);
         }
 
         // Allow plugins to add or remove postcss plugins
         if ( loader._compilation ) {
             plugins = loader._compilation.applyPluginsWaterfall(
-              &#x27;postcss-loader-before-processing&#x27;,
+              'postcss-loader-before-processing',
               [].concat(plugins),
               params
             );
@@ -242,7 +235,7 @@
             });
 
             result.messages.forEach(function (msg) {
-                if ( msg.type === &#x27;dependency&#x27; ) {
+                if ( msg.type === 'dependency' ) {
                     loader.addDependency(msg.file);
                 }
             });
@@ -252,7 +245,7 @@
             return null;
         });
     }).catch(function (error) {
-        if ( error.name === &#x27;CssSyntaxError&#x27; ) {
+        if ( error.name === 'CssSyntaxError' ) {
             callback(new PostCSSLoaderError(error));
         } else {
             callback(error);
@@ -274,14 +267,14 @@
     <li>description and source-code<pre class="apidocCodePre">function PostCSSLoaderError(error) {
     Error.call(this);
     Error.captureStackTrace(this, PostCSSLoaderError);
-    this.name = &#x27;Syntax Error&#x27;;
+    this.name = 'Syntax Error';
     this.error = error.input.source;
     this.message = error.reason;
     if ( error.line ) {
-        this.message += &#x27; (&#x27; + error.line + &#x27;:&#x27; + error.column + &#x27;)&#x27;;
+        this.message += ' (' + error.line + ':' + error.column + ')';
     }
-    if ( error.line &#x26;&#x26; error.input.source ) {
-        this.message += &#x27;\n\n&#x27; + error.showSourceCode() + &#x27;\n&#x27;;
+    if ( error.line &amp;&amp; error.input.source ) {
+        this.message += '\n\n' + error.showSourceCode() + '\n';
     }
     this.hideStack = true;
 }</pre></li>
@@ -312,7 +305,7 @@ result.warnings().forEach(function (msg) {
 });
 
 result.messages.forEach(function (msg) {
-    if ( msg.type === &#x27;dependency&#x27; ) {
+    if ( msg.type === 'dependency' ) {
         loader.addDependency(msg.file);
     }
 });
@@ -338,14 +331,14 @@ result.messages.forEach(function (msg) {
     <li>description and source-code<pre class="apidocCodePre">function PostCSSLoaderError(error) {
     Error.call(this);
     Error.captureStackTrace(this, PostCSSLoaderError);
-    this.name = &#x27;Syntax Error&#x27;;
+    this.name = 'Syntax Error';
     this.error = error.input.source;
     this.message = error.reason;
     if ( error.line ) {
-        this.message += &#x27; (&#x27; + error.line + &#x27;:&#x27; + error.column + &#x27;)&#x27;;
+        this.message += ' (' + error.line + ':' + error.column + ')';
     }
-    if ( error.line &#x26;&#x26; error.input.source ) {
-        this.message += &#x27;\n\n&#x27; + error.showSourceCode() + &#x27;\n&#x27;;
+    if ( error.line &amp;&amp; error.input.source ) {
+        this.message += '\n\n' + error.showSourceCode() + '\n';
     }
     this.hideStack = true;
 }</pre></li>
@@ -369,14 +362,14 @@ result.messages.forEach(function (msg) {
     <li>description and source-code<pre class="apidocCodePre">function PostCSSLoaderError(error) {
     Error.call(this);
     Error.captureStackTrace(this, PostCSSLoaderError);
-    this.name = &#x27;Syntax Error&#x27;;
+    this.name = 'Syntax Error';
     this.error = error.input.source;
     this.message = error.reason;
     if ( error.line ) {
-        this.message += &#x27; (&#x27; + error.line + &#x27;:&#x27; + error.column + &#x27;)&#x27;;
+        this.message += ' (' + error.line + ':' + error.column + ')';
     }
-    if ( error.line &#x26;&#x26; error.input.source ) {
-        this.message += &#x27;\n\n&#x27; + error.showSourceCode() + &#x27;\n&#x27;;
+    if ( error.line &amp;&amp; error.input.source ) {
+        this.message += '\n\n' + error.showSourceCode() + '\n';
     }
     this.hideStack = true;
 }</pre></li>
@@ -410,7 +403,7 @@ result.warnings().forEach(function (msg) {
 });
 
 result.messages.forEach(function (msg) {
-    if ( msg.type === &#x27;dependency&#x27; ) {
+    if ( msg.type === 'dependency' ) {
         loader.addDependency(msg.file);
     }
 });
@@ -426,3 +419,4 @@ result.messages.forEach(function (msg) {
     ]
 </div>
 </div>
+</body></html>

@@ -1,9 +1,14 @@
-# api documentation for  [postcss-loader (v1.3.3)](https://github.com/postcss/postcss-loader#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-postcss-loader.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-postcss-loader) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-postcss-loader.svg)](https://travis-ci.org/npmdoc/node-npmdoc-postcss-loader)
+# npmdoc-postcss-loader
+
+#### api documentation for  [postcss-loader (v1.3.3)](https://github.com/postcss/postcss-loader#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-postcss-loader.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-postcss-loader) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-postcss-loader.svg)](https://travis-ci.org/npmdoc/node-npmdoc-postcss-loader)
+
 #### PostCSS loader for webpack
 
-[![NPM](https://nodei.co/npm/postcss-loader.png?downloads=true)](https://www.npmjs.com/package/postcss-loader)
+[![NPM](https://nodei.co/npm/postcss-loader.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/postcss-loader)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-postcss-loader/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-postcss-loader_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-postcss-loader/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-postcss-loader/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-postcss-loader/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-postcss-loader/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-postcss-loader/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-postcss-loader/build/screenCapture.npmPackageListing.svg)
 
@@ -17,8 +22,7 @@
 
 {
     "author": {
-        "name": "Andrey Sitnik",
-        "email": "andrey@sitnik.ru"
+        "name": "Andrey Sitnik"
     },
     "bugs": {
         "url": "https://github.com/postcss/postcss-loader/issues"
@@ -76,8 +80,7 @@
     },
     "maintainers": [
         {
-            "name": "ai",
-            "email": "andrey@sitnik.ru"
+            "name": "ai"
         }
     ],
     "name": "postcss-loader",
@@ -85,7 +88,6 @@
     "pre-commit": [
         "lint-staged"
     ],
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/postcss/postcss-loader.git"
@@ -96,101 +98,6 @@
     },
     "version": "1.3.3"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module postcss-loader](#apidoc.module.postcss-loader)
-1.  [function <span class="apidocSignatureSpan">postcss-loader.</span>error (error)](#apidoc.element.postcss-loader.error)
-1.  object <span class="apidocSignatureSpan">postcss-loader.</span>error.prototype
-
-#### [module postcss-loader.error](#apidoc.module.postcss-loader.error)
-1.  [function <span class="apidocSignatureSpan">postcss-loader.</span>error (error)](#apidoc.element.postcss-loader.error.error)
-
-#### [module postcss-loader.error.prototype](#apidoc.module.postcss-loader.error.prototype)
-1.  [function <span class="apidocSignatureSpan">postcss-loader.error.prototype.</span>constructor (error)](#apidoc.element.postcss-loader.error.prototype.constructor)
-
-
-
-# <a name="apidoc.module.postcss-loader"></a>[module postcss-loader](#apidoc.module.postcss-loader)
-
-#### <a name="apidoc.element.postcss-loader.error"></a>[function <span class="apidocSignatureSpan">postcss-loader.</span>error (error)](#apidoc.element.postcss-loader.error)
-- description and source-code
-```javascript
-function PostCSSLoaderError(error) {
-    Error.call(this);
-    Error.captureStackTrace(this, PostCSSLoaderError);
-    this.name = 'Syntax Error';
-    this.error = error.input.source;
-    this.message = error.reason;
-    if ( error.line ) {
-        this.message += ' (' + error.line + ':' + error.column + ')';
-    }
-    if ( error.line && error.input.source ) {
-        this.message += '\n\n' + error.showSourceCode() + '\n';
-    }
-    this.hideStack = true;
-}
-```
-- example usage
-```shell
-n/a
-```
-
-
-
-# <a name="apidoc.module.postcss-loader.error"></a>[module postcss-loader.error](#apidoc.module.postcss-loader.error)
-
-#### <a name="apidoc.element.postcss-loader.error.error"></a>[function <span class="apidocSignatureSpan">postcss-loader.</span>error (error)](#apidoc.element.postcss-loader.error.error)
-- description and source-code
-```javascript
-function PostCSSLoaderError(error) {
-    Error.call(this);
-    Error.captureStackTrace(this, PostCSSLoaderError);
-    this.name = 'Syntax Error';
-    this.error = error.input.source;
-    this.message = error.reason;
-    if ( error.line ) {
-        this.message += ' (' + error.line + ':' + error.column + ')';
-    }
-    if ( error.line && error.input.source ) {
-        this.message += '\n\n' + error.showSourceCode() + '\n';
-    }
-    this.hideStack = true;
-}
-```
-- example usage
-```shell
-n/a
-```
-
-
-
-# <a name="apidoc.module.postcss-loader.error.prototype"></a>[module postcss-loader.error.prototype](#apidoc.module.postcss-loader.error.prototype)
-
-#### <a name="apidoc.element.postcss-loader.error.prototype.constructor"></a>[function <span class="apidocSignatureSpan">postcss-loader.error.prototype.</span>constructor (error)](#apidoc.element.postcss-loader.error.prototype.constructor)
-- description and source-code
-```javascript
-function PostCSSLoaderError(error) {
-    Error.call(this);
-    Error.captureStackTrace(this, PostCSSLoaderError);
-    this.name = 'Syntax Error';
-    this.error = error.input.source;
-    this.message = error.reason;
-    if ( error.line ) {
-        this.message += ' (' + error.line + ':' + error.column + ')';
-    }
-    if ( error.line && error.input.source ) {
-        this.message += '\n\n' + error.showSourceCode() + '\n';
-    }
-    this.hideStack = true;
-}
-```
-- example usage
-```shell
-n/a
 ```
 
 

@@ -1,6 +1,6 @@
 # npmdoc-postcss-loader
 
-#### api documentation for  [postcss-loader (v1.3.3)](https://github.com/postcss/postcss-loader#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-postcss-loader.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-postcss-loader) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-postcss-loader.svg)](https://travis-ci.org/npmdoc/node-npmdoc-postcss-loader)
+#### basic api documentation for  [postcss-loader (v1.3.3)](https://github.com/postcss/postcss-loader#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-postcss-loader.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-postcss-loader) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-postcss-loader.svg)](https://travis-ci.org/npmdoc/node-npmdoc-postcss-loader)
 
 #### PostCSS loader for webpack
 
@@ -96,7 +96,8 @@
         "lint-staged": "lint-staged",
         "test": "gulp"
     },
-    "version": "1.3.3"
+    "version": "1.3.3",
+    "bin": {}
 }
 ```
 
